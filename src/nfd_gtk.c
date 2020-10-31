@@ -57,7 +57,7 @@ static void AddFiltersToDialog( GtkWidget *dialog, const char *filterList )
             gtk_file_filter_add_pattern( filter, typebufWildcard );
             
             p_typebuf = typebuf;
-            memset( typebuf, 0, sizeof(char) * NFD_MAX_STRLEN );
+            memset( typebuf, 0, sizeof(char) * NFD_MAX_STRLEN - 2);
         }
         
         if ( *p_filterList == ';' || *p_filterList == '\0' )
